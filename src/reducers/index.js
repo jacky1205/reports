@@ -1,4 +1,4 @@
-import { FETCH_STUDENTS_DETAILS, SORT_BY_APLHABETICAL, SORT_BY_MARKS, FILTER_BY_NAME, AUTHENTICATION, SELECT_ONCHANGE } from '../types';
+import { FETCH_STUDENTS_DETAILS, SORT_BY_APLHABETICAL, SORT_BY_MARKS, FILTER_BY_NAME, AUTHENTICATION, SELECT_ONCHANGE, SELECT_DEFAULT_OPTIONS } from '../types';
 import Cookies from 'js-cookies';
 
 
@@ -40,6 +40,11 @@ export default function (state = initialState, action) {
                 isAuthLoggedIn: Cookies.getItem('user')
             }
         case SELECT_ONCHANGE:
+            return {
+                ...state,
+                selectOnChangeData: action.payload
+            }
+        case SELECT_DEFAULT_OPTIONS:
             return {
                 ...state,
                 selectOnChangeData: action.payload
