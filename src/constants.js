@@ -7,3 +7,8 @@ export const sortByMarks = {
     INCREASING: 'increasing',
     DECREASING: 'decreasing',
 }
+
+export const dropDownSelectType = {
+    SINGLE: 'radio',
+    MULTIPLE: 'checkbox',
+}
