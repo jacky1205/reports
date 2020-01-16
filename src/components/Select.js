@@ -153,7 +153,7 @@ function Select(props) {
             }</SelectedOptionLabel>}
 
             <DropdownContainer >
-                {searchable && <FilterInput placeholder='Search' onChange={handleFilterInput}></FilterInput>}
+                {searchable && <FilterInput placeholder='Search' onChange={handleFilterInput} onClick={handleFilterInput}></FilterInput>}
                 {!searchable && <DropIconContainer onClick={handleDefaultOptions} selectedLabel={[...checkedOptions.keys()].filter(id => checkedOptions.get(id)).length > 0 && selectType === dropDownSelectType.SINGLE}>
                     {showSelectedItemsLableNotSearchable() &&
                         [...checkedOptions.keys()].filter(id => checkedOptions.get(id)).map((id) => {

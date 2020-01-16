@@ -32,8 +32,8 @@ export const authenticationAction = (dispatch) => {
 }
 
 export const selectOnChangeAction = (dispatch, queryOnChange) => {
-    const mockData = [{ title: 'abc', disable: false }, { title: 'abcd', disable: true }, { title: 'bc' },{ title: 'ab' }]
-    const filteredOptions = mockData.filter((option) => option.title.toUpperCase().startsWith(queryOnChange.toUpperCase()))
+    const mockData = [{ title: 'abc', disable: false }, { title: 'abcd', disable: true }, { title: 'bc' }, { title: 'ab' }];
+    const filteredOptions = mockData.filter((option) => queryOnChange && option.title.toUpperCase().startsWith(queryOnChange.toUpperCase()));
     dispatch({
         type: SELECT_ONCHANGE, payload: filteredOptions
     })
